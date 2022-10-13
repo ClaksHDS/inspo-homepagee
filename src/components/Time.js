@@ -1,14 +1,22 @@
 import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
 import moment from "moment/moment";
 import styled from "styled-components";
 
 const Time = () => {
   const [currentDate, setCurrentDate] = useState("");
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    const date = moment().format("ddd Do MMM, h:mm a");
-    setCurrentDate(date);
+    const timer = setInterval(() => {
+      const date = moment().format("ddd Do MMM, h:mm a");
+      setCurrentDate(date);
+    }, 1000);
+    return () => {
+      clearInterval(timer);
+    };
   }, []);
+
   return (
     <Wrapper>
       <div className='time-container'>

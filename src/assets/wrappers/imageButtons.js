@@ -7,21 +7,21 @@ const Wrapper = styled.div`
     border-radius: var(--borderRadius);
   }
   .icon-btn {
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--headlineColor);
     cursor: pointer;
-    padding: 0.25rem 0.15rem;
+    padding: 0.1rem 0.1rem;
   }
   .prev-btn {
     margin-left: 0.55rem;
     position: absolute;
-    top: 60vh;
+    top: 65vh;
     left: 0;
   }
   .next-btn {
     margin-right: 0.55rem;
     position: absolute;
-    top: 60vh;
+    top: 65vh;
     right: 0;
   }
 `;
