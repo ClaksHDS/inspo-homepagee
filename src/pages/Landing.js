@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getImages } from "../features/Images/imagesSlice";
+import { BackgroundBtn } from "../components";
 
 const Landing = () => {
+  const dispatch = useDispatch();
+  const { images, imageIndex } = useSelector((store) => store.images);
+
+  useEffect(() => {
+    dispatch(getImages());
+  }, [dispatch]);
+
   return (
-    <main>
-      <h5>hi Bob</h5>
-      <p>all good ?</p>
+    <main style={{ backgroundImage: `url(${images[imageIndex].src})` }}>
+      <BackgroundBtn />
     </main>
   );
 };
