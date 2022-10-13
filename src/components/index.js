@@ -2,5 +2,6 @@
 
 import Loading from "./Loading";
 import BackgroundBtn from "./BackgroundBtn";
+import Time from "./Time";
 
-export { Loading, BackgroundBtn };
+export { Loading, BackgroundBtn, Time };
