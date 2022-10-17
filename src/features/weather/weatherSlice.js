@@ -36,6 +36,8 @@ const initialState = {
   icon: "",
   description: "",
   temperature: "",
+  tempMin: "",
+  tempMax: "",
   city: "",
 };
 
@@ -52,8 +54,10 @@ const weatherSlice = createSlice({
       state.isLoading = false;
       state.hasFailed = false;
       state.icon = action.payload.weather[0].icon;
-      state.temperature = action.payload.weather[0].description;
-      state.description = action.payload.main.temp;
+      state.description = action.payload.weather[0].description;
+      state.tempMin = action.payload.main.temp_min;
+      state.tempMax = action.payload.main.temp_max;
+      state.temperature = action.payload.main.temp;
       state.city = action.payload.name;
     },
     [getWeather.rejected]: (state) => {
