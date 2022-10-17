@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
 import moment from "moment/moment";
 import styled from "styled-components";
 
 const Time = () => {
   const [currentDate, setCurrentDate] = useState("");
-  const dispatch = useDispatch();
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -33,7 +31,5 @@ const Wrapper = styled.div`
   border-radius: var(--borderRadius);
   margin: 1rem;
   max-width: 12rem;
-  p {
-    padding-left: 1rem;
-  }
+  text-align: center;
 `;

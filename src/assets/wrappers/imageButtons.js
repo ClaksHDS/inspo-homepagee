@@ -6,6 +6,9 @@ const Wrapper = styled.div`
     background: var(--highlightColor);
     border-radius: var(--borderRadius);
   }
+  button:hover {
+    background: #fcc66b;
+  }
   .icon-btn {
     font-size: 2rem;
     color: var(--headlineColor);

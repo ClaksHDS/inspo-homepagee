@@ -3,5 +3,6 @@
 import Loading from "./Loading";
 import BackgroundBtn from "./BackgroundBtn";
 import Time from "./Time";
+import Weather from "./Weather";
 
-export { Loading, BackgroundBtn, Time };
+export { Loading, BackgroundBtn, Time, Weather };
