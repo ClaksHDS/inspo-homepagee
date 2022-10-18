@@ -11,6 +11,7 @@ const Wrapper = styled.div`
     margin: 1rem 2rem;
     padding: 1rem 1rem;
     color: var(--textColor);
+
     span {
       font-style: italic;
     }
@@ -19,7 +20,6 @@ const Wrapper = styled.div`
       color: var(--headlineColor);
       padding: 0.55rem;
       border-radius: var(--borderRadius);
-      text-align: center;
     }
   }
 `;
