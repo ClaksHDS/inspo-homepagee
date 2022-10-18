@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getQuote } from "../features/randomFact/quoteSlice";
+import { Loading } from "../components";
+/* Styles */
+import Wrapper from "../assets/wrappers/quote";
 
 const Quote = () => {
   const dispatch = useDispatch();
@@ -9,25 +12,26 @@ const Quote = () => {
   useEffect(() => {
     dispatch(getQuote());
   }, [dispatch]);
+
+  if (isLoading) {
+    return <Loading />;
+  }
   return (
-    <div>
-      <h5>{quote}</h5>
-      <p>{author}</p>
-      <span>
-        <img
-          src='https://theysaidso.com/branding/theysaidso.png'
-          height='20'
-          width='20'
-          alt='theysaidso.com'
-        />
-        <a
-          href='https://theysaidso.com'
-          title='Powered by quotes from theysaidso.com'
-        >
-          They Said So®
-        </a>
-      </span>
-    </div>
+    <Wrapper>
+      <div>
+        <div className='quote-details'>
+          <p>
+            <span>" {quote} "</span> - {author}
+          </p>
+          <a
+            href='https://theysaidso.com'
+            title='Powered by quotes from theysaidso.com'
+          >
+            They Said So®
+          </a>
+        </div>
+      </div>
+    </Wrapper>
   );
 };
 
