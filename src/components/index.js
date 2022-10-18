@@ -4,5 +4,6 @@ import Loading from "./Loading";
 import BackgroundBtn from "./BackgroundBtn";
 import Time from "./Time";
 import Weather from "./Weather";
+import Quote from "./Quote";
 
-export { Loading, BackgroundBtn, Time, Weather };
+export { Loading, BackgroundBtn, Time, Weather, Quote };

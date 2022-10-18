@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getImages } from "../features/Images/imagesSlice";
-import { BackgroundBtn, Time, Weather } from "../components";
+import { BackgroundBtn, Time, Weather, Quote } from "../components";
 
 const Landing = () => {
   const dispatch = useDispatch();
@@ -13,9 +13,12 @@ const Landing = () => {
 
   return (
     <main style={{ backgroundImage: `url(${images[imageIndex].src})` }}>
-      <Time />
-      <Weather />
+      <section className='dashboard'>
+        <Time />
+        <Weather />
+      </section>
       <BackgroundBtn />
+      <Quote />
     </main>
   );
 };

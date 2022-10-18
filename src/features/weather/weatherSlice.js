@@ -1,7 +1,4 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { queryByRole } from "@testing-library/react";
-import axios from "axios";
-import { json } from "react-router-dom";
 const openWeatherapiKey = `${process.env.REACT_APP_OPENWEATHER_KEY}`;
 const geopifyAPIkey = `${process.env.REACT_APP_GEOPIFY_KEY}`;
 
@@ -46,6 +43,7 @@ const weatherSlice = createSlice({
   initialState,
 
   extraReducers: {
+    // handle weather
     [getWeather.pending]: (state) => {
       state.isLoading = true;
       state.hasFailed = false;

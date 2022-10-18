@@ -135,7 +135,9 @@ main {
   background-size: cover;
   z-index: -2;
 }
-
+.dashboard {
+  padding: 2rem 2rem;
+}
 /* Animations */
 @keyframes spinner {
   to {
