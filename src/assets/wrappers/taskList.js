@@ -9,6 +9,9 @@ const Wrapper = styled.div`
     box-shadow: var(--shadow-2);
     padding: 2rem 2rem;
     margin: 3rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
   }
 `;
 

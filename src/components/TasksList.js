@@ -10,18 +10,20 @@ const TasksList = () => {
 
   return (
     <Wrapper>
-      <ul className='tasks-list'>
-        {tasks.map((task) => {
-          return (
-            <TaskItem
-              id={task.id}
-              key={task.id}
-              title={task.title}
-              completed={task.completed}
-            />
-          );
-        })}
-      </ul>
+      {tasks.length > 0 && (
+        <ul className='tasks-list'>
+          {tasks.map((task) => {
+            return (
+              <TaskItem
+                id={task.id}
+                key={task.id}
+                title={task.title}
+                completed={task.completed}
+              />
+            );
+          })}
+        </ul>
+      )}
     </Wrapper>
   );
 };
