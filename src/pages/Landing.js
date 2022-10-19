@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getImages } from "../features/Images/imagesSlice";
-import { BackgroundBtn, Time, Weather, Quote } from "../components";
+import { BackgroundBtn, Time, Weather, Quote, Tasks } from "../components";
 
 const Landing = () => {
   const dispatch = useDispatch();
@@ -17,6 +17,7 @@ const Landing = () => {
         <Time />
         <Weather />
       </section>
+      <Tasks />
       <BackgroundBtn />
       <Quote />
     </main>

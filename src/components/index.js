@@ -5,5 +5,17 @@ import BackgroundBtn from "./BackgroundBtn";
 import Time from "./Time";
 import Weather from "./Weather";
 import Quote from "./Quote";
+import Tasks from "./Tasks";
+import TasksForm from "./TasksForm";
+import TasksList from "./TasksList";
 
-export { Loading, BackgroundBtn, Time, Weather, Quote };
+export {
+  Loading,
+  BackgroundBtn,
+  Time,
+  Weather,
+  Quote,
+  Tasks,
+  TasksForm,
+  TasksList,
+};
