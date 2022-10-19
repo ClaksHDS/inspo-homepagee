@@ -10,18 +10,20 @@ const TasksForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(
-      addTask({
-        task: newTask,
-      })
-    );
+    if (newTask.trim().length === 0) {
+      alert("Enter a new task before adding");
+      setNewTask("");
+      return;
+    }
+    dispatch(addTask({ title: newTask }));
+    // set new task back to empty string once we submit one task
     setNewTask("");
   };
   return (
     <Wrapper>
       <form className='form' onSubmit={handleSubmit}>
         <div className='form-row'>
-          <label for='task' className='form-label'>
+          <label htmlFor='task' className='form-label'>
             What's up today ?
           </label>
           <input

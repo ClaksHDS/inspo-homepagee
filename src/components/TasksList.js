@@ -1,7 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
+import TaskItem from "./TaskItem";
+import { useSelector } from "react-redux";
+import { selectTasks } from "../features/tasks/taskSlice";
+/* Styles */
+import Wrapper from "../assets/wrappers/taskList";
 
 const TasksList = () => {
-  return <div>TasksList</div>;
+  const tasks = useSelector(selectTasks);
+
+  return (
+    <Wrapper>
+      <ul className='tasks-list'>
+        {tasks.map((task) => {
+          return (
+            <TaskItem
+              id={task.id}
+              key={task.id}
+              title={task.title}
+              completed={task.completed}
+            />
+          );
+        })}
+      </ul>
+    </Wrapper>
+  );
 };
 
 export default TasksList;

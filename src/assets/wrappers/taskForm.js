@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Wrapper = styled.form`
+const Wrapper = styled.div`
   .form {
     width: 90vw;
     max-width: var(--fixedWidth);
