@@ -4,7 +4,7 @@ import TasksList from "./TasksList";
 
 const Tasks = () => {
   return (
-    <section>
+    <section className='tasks-wrapper'>
       <TasksForm />
       <TasksList />
     </section>

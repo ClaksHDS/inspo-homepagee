@@ -3,37 +3,58 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   background: var(--backgroundColor);
   border-radius: var(--borderRadius);
-  width: 350px;
-  height: 150px;
-  text-align: center;
+  width: 220px;
+  height: 90px;
   display: grid;
   place-items: center;
-  gap: 0;
-  margin: 0 0;
-  padding: 0 0;
+  box-shadow: var(--shadow-2);
   .weather-header {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.9rem;
-    padding-top: 0;
+    gap: 0.5rem;
+    place-items: center;
+
     img {
-      height: 70px;
-      width: 70px;
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      background-color: var(--highlightColor);
+    }
+    h5,
+    h4 {
+      font-size: var(--smallText);
+    }
+    h4 {
+      font-weight: bold;
     }
   }
   .details {
-    display: flex;
-    place-items: center;
-    text-transform: capitalize;
-    text-align: center;
-    gap: 0.5rem;
-    margin: 0;
+    display: none;
   }
-  .temp-details {
-    display: flex;
+  @media (min-width: 990px) {
+    width: 350px;
+    height: 150px;
+    display: grid;
     place-items: center;
-    gap: 0.5rem;
+    .weather-header {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      padding-top: 1rem;
+      h4,
+      h5 {
+        font-size: 1.1rem;
+      }
+      img {
+        height: 80px;
+        width: 80px;
+      }
+    }
+    .details {
+      display: flex;
+      margin: 0 auto;
+      text-transform: capitalize;
+      gap: 0.5rem;
+    }
   }
 `;
 

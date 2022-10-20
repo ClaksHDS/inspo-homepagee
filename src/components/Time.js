@@ -34,4 +34,5 @@ const Wrapper = styled.div`
   text-align: center;
   display: grid;
   place-items: center;
+  box-shadow: var(--shadow-2);
 `;

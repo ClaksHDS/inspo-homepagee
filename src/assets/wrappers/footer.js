@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Wrapper = styled.footer`
-  height: 20vh;
+  height: 10vh;
   display: grid;
   padding-top: 1rem;
   padding-bottom: 0;

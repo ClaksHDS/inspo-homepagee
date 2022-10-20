@@ -25,6 +25,9 @@ const Wrapper = styled.div`
       font-size: var(--smallText);
       box-shadow: var(--shadow-2);
     }
+    .quote-reference:hover {
+      background: #fcc66b;
+    }
   }
 `;
 

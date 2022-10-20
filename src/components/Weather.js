@@ -41,9 +41,7 @@ const Weather = () => {
       </header>
       <div className='details'>
         <p>{description}.</p>
-      </div>
-      <div className='temp-details'>
-        <p>Min. {Math.round(tempMin)}° -</p>
+        <p>Min. {Math.round(tempMin)}°</p>
         <p>Max. {Math.round(tempMax)}°</p>
       </div>
     </Wrapper>

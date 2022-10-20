@@ -22,6 +22,7 @@ const BackgroundBtn = () => {
           type='button'
           aria-label='show previous background image'
           className='prev-btn'
+          title='Go back to the previous background'
           onClick={prevImage}
         >
           <BsArrowLeftCircle className='icon-btn' />
@@ -29,6 +30,7 @@ const BackgroundBtn = () => {
         <button
           type='button'
           aria-label='show next background image'
+          title='Change background'
           className='next-btn'
           onClick={nextImage}
         >
