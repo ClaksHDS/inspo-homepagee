@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# Inspirational Homepage
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> A Front-End project of an **inspirational homepage** for Codecademy's Front End Engineering Path. This application interacts with different APIs to display dynamic data. It will also provide users with a space to write down their tasks for the day. This project was bootstrapped with Create React App, using the Redux and Redux Toolkit template.
 
-## Available Scripts
+### Features
 
-In the project directory, you can run:
+> Users will be able to check the date and time, and the current weather.
+> The user can dynamically change the background image and select through multiple fetched images and also go back to a previous one. The application display an inspirational quote.
+> The users can write down their tasks of the day, that will be display. They can mark their tasks as completed or delete them.
 
-### `npm start`
+### Technologies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- HTML, CSS, Javascript
+- React _v18.2.0_
+- React Redux _v8.0.4_
+- Redux Toolkit _v1.8.6_
+- React Router _v6.4.2_
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Additional libraries
 
-### `npm test`
+- React-icons _v4.4.0_
+- Styled Components _v5.3.6_
+- Normalize.css _v8.0.1_
+- Axios _v1.1.2_
+- Moment.js _v2.29.4_
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### APIs :
 
-### `npm run build`
+- **OpenWeather** : to fetch the current weather, give temperatures
+- **Geopify** : to get the user's coordinates
+- **Quotes via RapidAPI** : to fetch a quote
+- **Unsplash API**: to fetch random images to use as a background
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Management Tools
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> - GithubDesktop to handle version control.
+> - Trello to create a board with a checklist of all the different steps of the project, and plan my work.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Lighthouse scores
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> **Accessibility** :
+>
+> **Performances** :
+>
+> **Good practices** :
+>
+> **Search Engine Optimization** :
