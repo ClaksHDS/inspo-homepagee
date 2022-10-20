@@ -3,39 +3,37 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   background: var(--backgroundColor);
   border-radius: var(--borderRadius);
-  margin: 1rem;
-  max-width: 15rem;
+  width: 350px;
+  height: 150px;
   text-align: center;
-  padding: 1rem 1rem;
-  h4 {
-    margin-top: 0;
-    padding-top: 2rem;
-  }
-  h3 {
-    margin-top: 0;
-  }
-  p {
-    text-transform: capitalize;
-  }
-  .details {
-    display: grid;
-    place-items: center;
-    background: var(--highlightColor);
-    border-radius: var(--borderRadius);
-    padding: 0 0;
-    margin: 0 1rem;
-    p {
-      margin: 0;
-      padding-bottom: 1rem;
+  display: grid;
+  place-items: center;
+  gap: 0;
+  margin: 0 0;
+  padding: 0 0;
+  .weather-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.9rem;
+    padding-top: 0;
+    img {
+      height: 70px;
+      width: 70px;
     }
   }
-  .weather-icon {
-    font-size: 1rem;
+  .details {
+    display: flex;
+    place-items: center;
+    text-transform: capitalize;
+    text-align: center;
+    gap: 0.5rem;
     margin: 0;
   }
-  .temp-info {
+  .temp-details {
     display: flex;
-    justify-content: space-around;
+    place-items: center;
+    gap: 0.5rem;
   }
 `;
 

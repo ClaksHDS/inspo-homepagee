@@ -18,18 +18,18 @@ const Quote = () => {
   }
   return (
     <Wrapper>
-      <div>
-        <div className='quote-details'>
-          <p>
-            <span>" {quote} "</span> - {author}
-          </p>
-          <a
-            href='https://theysaidso.com'
-            title='Powered by quotes from theysaidso.com'
-          >
-            They Said So®
-          </a>
-        </div>
+      <div className='quote-details'>
+        <p>
+          <span>" {quote} "</span> - {author}
+        </p>
+        <br />
+        <a
+          href='https://theysaidso.com'
+          title='Powered by quotes from theysaidso.com'
+          className='quote-reference'
+        >
+          They Said So®
+        </a>
       </div>
     </Wrapper>
   );

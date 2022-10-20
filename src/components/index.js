@@ -8,6 +8,7 @@ import Quote from "./Quote";
 import Tasks from "./Tasks";
 import TasksForm from "./TasksForm";
 import TasksList from "./TasksList";
+import Footer from "./Footer";
 
 export {
   Loading,
@@ -18,4 +19,5 @@ export {
   Tasks,
   TasksForm,
   TasksList,
+  Footer,
 };

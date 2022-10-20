@@ -5,15 +5,16 @@ const Wrapper = styled.div`
     border-color: transparent;
     background: var(--highlightColor);
     border-radius: var(--borderRadius);
+    display: flex;
+    place-items: center;
   }
   button:hover {
     background: #fcc66b;
   }
   .icon-btn {
-    font-size: 2rem;
+    font-size: 1.55rem;
     color: var(--headlineColor);
     cursor: pointer;
-    padding: 0.1rem 0.1rem;
   }
   .prev-btn {
     margin-left: 0.55rem;
@@ -26,6 +27,12 @@ const Wrapper = styled.div`
     position: absolute;
     top: 65vh;
     right: 0;
+  }
+  @media (min-width: 990px) {
+    .icon-btn {
+      font-size: 1.85rem;
+      padding: 0.0155rem;
+    }
   }
 `;
 

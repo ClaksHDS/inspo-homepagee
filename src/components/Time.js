@@ -17,9 +17,7 @@ const Time = () => {
 
   return (
     <Wrapper>
-      <div className='time-container'>
-        <p>{currentDate}</p>
-      </div>
+      <p>{currentDate}</p>
     </Wrapper>
   );
 };
@@ -29,7 +27,11 @@ export default Time;
 const Wrapper = styled.div`
   background: var(--backgroundColor);
   border-radius: var(--borderRadius);
-  margin: 1rem;
-  max-width: 12rem;
+  padding: 0rem 1rem;
+  height: 4rem;
+  max-width: 14rem;
+  margin-top: 0;
   text-align: center;
+  display: grid;
+  place-items: center;
 `;
