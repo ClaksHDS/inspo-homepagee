@@ -9,8 +9,19 @@ import Wrapper from "../assets/wrappers/taskItem";
 const TaskItem = ({ id, title, completed }) => {
   const dispatch = useDispatch();
 
+  const styles = {
+    taskCompleted: {
+      textDecoration: completed ? "line-through" : "none",
+    },
+  };
+
   const markTaskCompleted = () => {
-    dispatch(completeTask({ id: id, completed: !completed }));
+    dispatch(
+      completeTask({
+        id: id,
+        completed: !completed,
+      })
+    );
   };
 
   const markTaskDeleted = () => {
@@ -20,7 +31,7 @@ const TaskItem = ({ id, title, completed }) => {
   return (
     <Wrapper>
       <li>
-        <div className='task-item'>
+        <div className='task-item' style={styles.taskCompleted}>
           {title}
           <div className='btn-container'>
             <button

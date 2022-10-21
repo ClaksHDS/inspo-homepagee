@@ -1,14 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-/* const getLocalStorage = () => {
-  let title = localStorage.getItem("tasks");
-  if (title) {
-    return JSON.parse(localStorage.getItem("tasks"));
-  } else {
-    return [];
-  }
-}; */
-
 const taskSlice = createSlice({
   name: "task",
   initialState: [],
@@ -23,7 +14,7 @@ const taskSlice = createSlice({
     },
     completeTask: (state, action) => {
       const index = state.findIndex((task) => task.id === action.payload.id);
-      state.tasks[index].completed = action.payload.completed;
+      state[index].completed = action.payload.completed;
     },
     deleteTask: (state, action) => {
       return state.filter((task) => task.id !== action.payload.id);
