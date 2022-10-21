@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { addTask } from "../features/tasks/taskSlice";
 /* Styles */
@@ -6,6 +6,7 @@ import Wrapper from "../assets/wrappers/taskForm";
 
 const TasksForm = () => {
   const dispatch = useDispatch();
+  // dispatch the input to the state containing the tasks
   const [newTask, setNewTask] = useState("");
 
   const handleSubmit = (e) => {
@@ -18,7 +19,9 @@ const TasksForm = () => {
     dispatch(addTask({ title: newTask }));
     // set new task back to empty string once we submit one task
     setNewTask("");
+    localStorage.setItem("tasks", JSON.stringify(newTask));
   };
+
   return (
     <Wrapper>
       <form className='form' onSubmit={handleSubmit}>

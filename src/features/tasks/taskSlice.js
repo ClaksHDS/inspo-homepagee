@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-/* export const getLocalStorage = () => {
-  let tasks = localStorage.getItem("tasks");
-  if (tasks) {
-    return (tasks = JSON.parse(localStorage.getItem("tasks")));
+/* const getLocalStorage = () => {
+  let title = localStorage.getItem("tasks");
+  if (title) {
+    return JSON.parse(localStorage.getItem("tasks"));
   } else {
     return [];
   }

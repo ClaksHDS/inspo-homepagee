@@ -27,6 +27,7 @@ const Quote = () => {
           href='https://theysaidso.com'
           title='Powered by quotes from theysaidso.com'
           className='quote-reference'
+          rel='noopener'
         >
           They Said So®
         </a>
