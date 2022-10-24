@@ -5,7 +5,7 @@ const taskSlice = createSlice({
   initialState: [],
   reducers: {
     addTask: (state, action) => {
-      const newTask = {
+      let newTask = {
         id: new Date().getTime().toString(),
         title: action.payload.title,
         completed: false,

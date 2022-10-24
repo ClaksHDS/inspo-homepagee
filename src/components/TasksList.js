@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import TaskItem from "./TaskItem";
 import { useSelector } from "react-redux";
 import { selectTasks } from "../features/tasks/taskSlice";
