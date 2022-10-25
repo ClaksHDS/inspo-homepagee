@@ -5,14 +5,14 @@ import { addTask } from "../features/tasks/taskSlice";
 /* Styles */
 import Wrapper from "../assets/wrappers/taskForm";
 
-const getLocalStorage = () => {
+/* const getLocalStorage = () => {
   let newTask = localStorage.getItem("tasksList");
   if (newTask) {
     return (newTask = JSON.parse(localStorage.getItem("tasksList")));
   } else {
     return [];
   }
-};
+}; */
 
 const TasksForm = () => {
   const dispatch = useDispatch();
@@ -31,10 +31,10 @@ const TasksForm = () => {
     setNewTask("");
   };
 
-  useEffect(() => {
+  /* useEffect(() => {
     localStorage.setItem("tasksList", JSON.stringify(getLocalStorage(newTask)));
   }, [newTask]);
-
+ */
   return (
     <Wrapper>
       <form className='form' onSubmit={handleSubmit}>

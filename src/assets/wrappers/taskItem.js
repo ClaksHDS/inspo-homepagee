@@ -10,6 +10,11 @@ const Wrapper = styled.div`
     padding: 0.55rem;
     margin: 1.25rem;
   }
+  text-area {
+    background-color: var(--backgroundColor);
+    border-color: transparent;
+    outline: none;
+  }
   .btn-container {
     position: absolute;
     top: -25px;
