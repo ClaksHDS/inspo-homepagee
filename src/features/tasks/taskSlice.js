@@ -1,15 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-// store the tasks in the local storage so the user can refresh or close the page and still view his/her tasks
-const getLocalStorage = () => {
-  let tasks = localStorage.getItem("tasksList");
-  if (tasks) {
-    return (tasks = JSON.parse(localStorage.getItem("tasksList")));
-  } else {
-    return [];
-  }
-};
-
 const taskSlice = createSlice({
   name: "task",
   initialState: [],

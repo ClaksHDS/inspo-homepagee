@@ -8,6 +8,11 @@ import Wrapper from "../assets/wrappers/taskList";
 const TasksList = () => {
   const tasks = useSelector(selectTasks);
 
+  // add each tasks to the local storage
+  React.useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
+
   return (
     <Wrapper>
       {tasks.length > 0 && (
