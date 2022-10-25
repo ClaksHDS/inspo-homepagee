@@ -5,16 +5,22 @@ const Wrapper = styled.div`
     border: 1px solid var(--highlightColor);
     width: max-content;
     border-radius: var(--borderRadius);
+    background: var(--backgroundColor);
     color: var(--textColor);
     position: relative;
     padding: 0.55rem;
-    margin: 1.25rem;
+    margin: 1.2rem;
+    display: flex;
+    flex-direction: column;
   }
-  text-area {
-    background-color: var(--backgroundColor);
-    border-color: transparent;
+  .task {
+    border: none;
+    background-color: transparent;
+    overflow: auto;
     outline: none;
+    text-align: center;
   }
+
   .btn-container {
     position: absolute;
     top: -25px;
@@ -26,7 +32,7 @@ const Wrapper = styled.div`
   button {
     border: transparent;
     background: transparent;
-    color: var(--headline-color);
+    color: var(--headlineColor);
     cursor: pointer;
   }
 `;

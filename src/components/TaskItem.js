@@ -54,11 +54,14 @@ const TaskItem = ({ id, title, completed }) => {
       <li>
         <div className='task-item'>
           <textarea
+            className='task'
             style={styles.taskCompleted}
             ref={inputRef}
             disabled={inputRef}
             defaultValue={title}
-            onKeyPress={(e) => updateTask(title.id, inputRef.current, e)}
+            onKeyPress={(e) =>
+              updateTask(title.id, inputRef.current.valueOf, e)
+            }
           />
 
           <div className='btn-container'>
