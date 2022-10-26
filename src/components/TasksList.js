@@ -6,12 +6,20 @@ import { selectTasks } from "../features/tasks/taskSlice";
 import Wrapper from "../assets/wrappers/taskList";
 
 const TasksList = () => {
-  const tasks = useSelector(selectTasks);
+  let tasks = useSelector(selectTasks);
 
-  // add each tasks to the local storage
-  React.useEffect(() => {
+  // restoring tasks from local storage
+  //const savedTasks = localStorage.getItem("tasks");
+
+  // save new tasks into local storage
+  /* React.useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
+    // add tasks as a dependency to update the local storage anytime we add a new task
   }, [tasks]);
+
+  React.useEffect(() => {
+    const savedTasks = localStorage.getItem("tasks");
+  }, []); */
 
   return (
     <Wrapper>

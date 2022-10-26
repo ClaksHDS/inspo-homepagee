@@ -1,8 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const tasks =
+  localStorage.getItem("tasks") !== null
+    ? JSON.parse(localStorage.getItem("tasks"))
+    : [];
+
 const taskSlice = createSlice({
   name: "task",
-  initialState: [],
+  initialState: tasks,
   reducers: {
     // add a new task
     addTask: (state, action) => {
@@ -12,6 +17,7 @@ const taskSlice = createSlice({
         completed: false,
       };
       state.push(newTask);
+      localStorage.setItem("tasks", JSON.stringify(state));
     },
     // mark a task as completed
     completeTask: (state, action) => {
