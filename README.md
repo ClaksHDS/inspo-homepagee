@@ -7,6 +7,7 @@
 > Users will be able to check the date and time, and the current weather.
 > The user can dynamically change the background image and select through multiple fetched images and also go back to a previous one. The application display an inspirational quote.
 > The users can write down their tasks of the day, that will be display. They can mark their tasks as completed, delete and edit them.
+> The list of tasks and their states (completed or not) is preserved when the page is refreshed.
 
 ### Technologies
 

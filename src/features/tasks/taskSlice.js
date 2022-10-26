@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// get the tasks from local storage only if there is something stored in the array
 const tasks =
   localStorage.getItem("tasks") !== null
     ? JSON.parse(localStorage.getItem("tasks"))
