@@ -18,7 +18,6 @@ const Wrapper = styled.div`
     background-color: transparent;
     overflow: auto;
     outline: none;
-    text-align: center;
   }
 
   .btn-container {

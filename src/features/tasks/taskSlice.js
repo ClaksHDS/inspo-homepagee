@@ -17,12 +17,12 @@ const taskSlice = createSlice({
         completed: false,
       };
       state.push(newTask);
-      localStorage.setItem("tasks", JSON.stringify(state));
     },
     // mark a task as completed
     completeTask: (state, action) => {
       const index = state.findIndex((task) => task.id === action.payload.id);
       state[index].completed = action.payload.completed;
+      localStorage.setItem("tasks", JSON.stringify(state.task));
     },
     // delete a specific task
     deleteTask: (state, action) => {
