@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import {
   completeTask,
   deleteTask,
@@ -51,47 +51,43 @@ const TaskItem = ({ id, title, completed }) => {
 
   return (
     <Wrapper>
-      <li>
-        <div className='task-item'>
-          <textarea
-            className='task'
-            style={styles.taskCompleted}
-            ref={inputRef}
-            disabled={inputRef}
-            defaultValue={title}
-            onKeyPress={(e) =>
-              updateTask(title.id, inputRef.current.valueOf, e)
-            }
-          />
+      <div className='task-item'>
+        <textarea
+          className='task'
+          style={styles.taskCompleted}
+          ref={inputRef}
+          disabled={inputRef}
+          defaultValue={title}
+          onKeyPress={(e) => updateTask(title.id, inputRef.current.valueOf, e)}
+        />
 
-          <div className='btn-container'>
-            <button
-              type='button'
-              title='Mark task as completed'
-              aria-label='Mark the task as completed'
-              onClick={() => markTaskCompleted()}
-            >
-              <FiCheckCircle />
-            </button>
-            <button
-              type='button'
-              title='Edit this task'
-              aria-label='Edit and change this task'
-              onClick={() => changeFocus()}
-            >
-              <FiEdit />
-            </button>
-            <button
-              type='button'
-              title='Delete task'
-              aria-label='Delete the task'
-              onClick={() => markTaskDeleted()}
-            >
-              <FiTrash2 />
-            </button>
-          </div>
+        <div className='btn-container'>
+          <button
+            type='button'
+            title='Mark task as completed'
+            aria-label='Mark the task as completed'
+            onClick={() => markTaskCompleted()}
+          >
+            <FiCheckCircle />
+          </button>
+          <button
+            type='button'
+            title='Edit this task'
+            aria-label='Edit and change this task'
+            onClick={() => changeFocus()}
+          >
+            <FiEdit />
+          </button>
+          <button
+            type='button'
+            title='Delete task'
+            aria-label='Delete the task'
+            onClick={() => markTaskDeleted()}
+          >
+            <FiTrash2 />
+          </button>
         </div>
-      </li>
+      </div>
     </Wrapper>
   );
 };

@@ -31,6 +31,7 @@ const TasksForm = () => {
           </label>
           <input
             type='text'
+            aria-label='Write, modify, delete or mark you task as completed'
             placeholder='Write a new task'
             id='task'
             className='form-input'

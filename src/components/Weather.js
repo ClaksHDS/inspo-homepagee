@@ -21,7 +21,9 @@ const Weather = () => {
 
   useEffect(() => {
     dispatch(getCoordinates());
-    dispatch(getWeather({ lat, lon }));
+    if ({ lat, lon }) {
+      dispatch(getWeather({ lat, lon }));
+    }
   }, [dispatch, lat, lon]);
 
   if (isLoading) {

@@ -16,7 +16,7 @@ const TasksList = () => {
   return (
     <Wrapper>
       {tasks.length > 0 && (
-        <ul className='tasks-list'>
+        <div className='tasks-list'>
           {tasks.map((task) => {
             return (
               <TaskItem
@@ -27,7 +27,7 @@ const TasksList = () => {
               />
             );
           })}
-        </ul>
+        </div>
       )}
     </Wrapper>
   );
