@@ -23,7 +23,6 @@ const Landing = () => {
       <main
         style={{
           backgroundImage: `url(${images[imageIndex].src})`,
-          backgroundColor: "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5))",
         }}
       >
         <section className='dashboard'>

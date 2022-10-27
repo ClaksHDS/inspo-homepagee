@@ -1,9 +1,14 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  padding: 1.5rem;
+  padding: 2rem;
   display: grid;
   place-items: center;
+  // fix the quote at the bottom
+  position: absolute;
+  bottom: 0;
+  left: 5rem;
+  right: 5rem;
   .quote-details {
     display: flex;
     width: 80vw;
