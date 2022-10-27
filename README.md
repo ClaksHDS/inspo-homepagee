@@ -39,14 +39,16 @@
 
 ### Lighthouse scores
 
-> **Accessibility** :
+> **Accessibility** : **_100_** on desktop and mobile
 >
-> **Performances** :
+> **Performances** : **_65_** on desktop (work on the images format) / **_67_** on mobile
 >
-> **Good practices** :
+> **Good practices** : **_75_** on desktop
 >
-> **Search Engine Optimization** :
+> **Search Engine Optimization** : **\*100** on desktop and mobile
 
 ### Future Work
 
 > - Improve the Lighthouse scores
+> - Improve the layout for the mobile version
+> - Write unit tests
