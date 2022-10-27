@@ -46,3 +46,7 @@
 > **Good practices** :
 >
 > **Search Engine Optimization** :
+
+### Future Work
+
+> - Improve the Lighthouse scores
