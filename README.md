@@ -30,7 +30,6 @@
 ### APIs :
 
 - **OpenWeather** : to fetch the current weather, give temperatures
-- **Geopify** : to get the user's coordinates
 - **Quotes via RapidAPI** : to fetch a quote
 - **Unsplash API**: to fetch random images to use as a background
 
@@ -43,14 +42,15 @@
 
 > **Accessibility** : **_100_** on desktop and mobile
 >
-> **Performances** : **_65_** on desktop (work on the images format) / **_67_** on mobile
+> **Performances** : **_68_** on desktop (work on the images format) / **_67_** on mobile
 >
-> **Good practices** : **_75_** on desktop
+> **Good practices** : **_67_** on desktop
 >
 > **Search Engine Optimization** : **\*100** on desktop and mobile
 
 ### Future Work
 
+> - Add a functionality to ask the user the permission to locate her/him and improve the lighthouse scores in good practices
 > - Improve the Lighthouse scores
 > - Improve the layout for the mobile version
 > - Write unit tests
