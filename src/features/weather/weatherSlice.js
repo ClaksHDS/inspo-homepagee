@@ -1,32 +1,27 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 const openWeatherapiKey = `${process.env.REACT_APP_OPENWEATHER_KEY}`;
-const geopifyAPIkey = `${process.env.REACT_APP_GEOPIFY_KEY}`;
 
-// fetch the coordinates to get the weather after
-const getCoordinates = createAsyncThunk("weather/getCoordinates", async () => {
-  const response = await fetch(
-    `https://api.geoapify.com/v1/ipinfo?apiKey=${geopifyAPIkey}
-`
-  );
-  const json = response.json();
-  return json;
-});
-
-// to fetch the weather from OpenWeather api
 const getWeather = createAsyncThunk(
   "weather/getWeather",
-  async (coordinates) => {
-    const { lat, lon } = coordinates;
+  async ({ lat, lon }) => {
     const response = await fetch(
       `https://api.openweathermap.org/data/2.5/weather/?lat=${lat}&lon=${lon}&units=metric&APPID=${openWeatherapiKey}`
     );
-    const json = response.json();
-    return json;
+    const json = await response.json();
+    const weatherData = {
+      icon: json.weather[0].icon,
+      description: json.weather[0].description,
+      temperature: json.main.temp,
+      tempMin: json.main.temp_min,
+      tempMax: json.main.temp_max,
+      city: json.name,
+    };
+    return weatherData;
   }
 );
 
 const initialState = {
-  isLoading: false,
+  isLoading: true, // will ask for geolocation authorization before fetching the weather
   hasFailed: false,
   lat: "",
   lon: "",
@@ -41,6 +36,16 @@ const initialState = {
 const weatherSlice = createSlice({
   name: "weather",
   initialState,
+  reducers: {
+    setCoordinates: (state, action) => {
+      const { latitude, longitude } = action.payload;
+      state.lat = latitude;
+      state.lon = longitude;
+    },
+    setError: (state) => {
+      state.hasFailed = true;
+    },
+  },
 
   extraReducers: {
     // handle weather
@@ -51,34 +56,21 @@ const weatherSlice = createSlice({
     [getWeather.fulfilled]: (state, action) => {
       state.isLoading = false;
       state.hasFailed = false;
-      state.icon = action.payload.weather[0].icon;
-      state.description = action.payload.weather[0].description;
-      state.tempMin = action.payload.main.temp_min;
-      state.tempMax = action.payload.main.temp_max;
-      state.temperature = action.payload.main.temp;
-      state.city = action.payload.name;
+      state.description = action.payload.description;
+      state.icon = action.payload.icon;
+      state.temperature = action.payload.temperature;
+      state.tempMin = action.payload.tempMin;
+      state.tempMax = action.payload.tempMax;
+      state.city = action.payload.city;
     },
     [getWeather.rejected]: (state) => {
       state.isLoading = false;
       state.hasFailed = true;
     },
-    // handle coordinates
-    [getCoordinates.pending]: (state) => {
-      state.isLoading = true;
-      state.hasFailed = false;
-    },
-    [getCoordinates.fulfilled]: (state, action) => {
-      state.lat = action.payload.location.latitude;
-      state.lon = action.payload.location.longitude;
-      state.isLoading = false;
-      state.hasFailed = false;
-    },
-    [getCoordinates.rejected]: (state) => {
-      state.isLoading = true;
-      state.hasFailed = false;
-    },
   },
 });
 
-export { getWeather, getCoordinates };
+export const { setCoordinates, setError } = weatherSlice.actions;
+export const selectWeather = (state) => state.weather;
+export { getWeather };
 export default weatherSlice.reducer;
