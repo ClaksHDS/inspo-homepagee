@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1f74c640-163d-4249-988b-b5f0e335d07f/deploy-status)](https://app.netlify.com/sites/inspohomepage-reactproject/deploys)
+
 # Inspirational Homepage
 
 > A Front-End project of an **inspirational homepage** for Codecademy's Front End Engineering Path. This application interacts with different APIs to display dynamic data. It will also provide users with a space to write down their tasks for the day. This project was bootstrapped with Create React App, using the Redux and Redux Toolkit template.
