@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   .task-item {
     border: 1px solid var(--highlightColor);
-    width: max-content;
+    max-width: max-content;
     border-radius: var(--borderRadius);
     background: var(--backgroundColor);
     color: var(--textColor);
@@ -11,13 +11,13 @@ const Wrapper = styled.div`
     padding: 0.55rem;
     margin: 1.2rem;
     display: flex;
-    flex-direction: column;
   }
   .task {
     border: none;
     background-color: transparent;
     overflow: auto;
     outline: none;
+    display: flex;
   }
 
   .btn-container {

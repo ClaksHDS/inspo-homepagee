@@ -54,6 +54,8 @@ const TaskItem = ({ id, title, completed }) => {
       <div className='task-item'>
         <textarea
           className='task'
+          rows='3'
+          cols='30'
           style={styles.taskCompleted}
           ref={inputRef}
           disabled={inputRef}
