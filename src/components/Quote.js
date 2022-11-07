@@ -7,7 +7,9 @@ import Wrapper from "../assets/wrappers/quote";
 
 const Quote = () => {
   const dispatch = useDispatch();
-  const { quote, author, isLoading } = useSelector((store) => store.quote);
+  const { quote, author, isLoading, isQuoteOpen } = useSelector(
+    (store) => store.quote
+  );
 
   useEffect(() => {
     dispatch(getQuote());
@@ -16,22 +18,25 @@ const Quote = () => {
   if (isLoading) {
     return <Loading />;
   }
+
   return (
     <Wrapper>
-      <div className='quote-details'>
-        <p>
-          <span>" {quote} "</span> - {author}
-        </p>
-        <br />
-        <a
-          href='https://theysaidso.com'
-          title='Powered by quotes from theysaidso.com'
-          className='quote-reference'
-          rel='noopener'
-        >
-          They Said So®
-        </a>
-      </div>
+      <aside className={`${isQuoteOpen ? "modal show-modal" : "modal"}`}>
+        <div className='quote-details'>
+          <p>
+            <span>" {quote} "</span> - {author}
+          </p>
+          <br />
+          <a
+            href='https://theysaidso.com'
+            title='Powered by quotes from theysaidso.com'
+            className='quote-reference'
+            rel='noopener'
+          >
+            They Said So®
+          </a>
+        </div>
+      </aside>
     </Wrapper>
   );
 };

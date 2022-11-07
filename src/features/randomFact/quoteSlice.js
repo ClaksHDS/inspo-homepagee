@@ -21,10 +21,16 @@ const initialState = {
   hasFailed: false,
   quote: "",
   author: "",
+  isQuoteOpen: false,
 };
 const quoteSlice = createSlice({
   name: "quote",
   initialState,
+  reducers: {
+    toggleModal: (state) => {
+      state.isQuoteOpen = !state.isQuoteOpen;
+    },
+  },
   extraReducers: {
     [getQuote.pending]: (state) => {
       state.isLoading = true;
@@ -43,5 +49,6 @@ const quoteSlice = createSlice({
   },
 });
 
+export const { toggleModal } = quoteSlice.actions;
 export { getQuote };
 export default quoteSlice.reducer;

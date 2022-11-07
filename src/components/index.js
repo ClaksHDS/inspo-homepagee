@@ -9,6 +9,7 @@ import Tasks from "./Tasks";
 import TasksForm from "./TasksForm";
 import TasksList from "./TasksList";
 import Footer from "./Footer";
+import Modal from "./Modal";
 
 export {
   Loading,
@@ -20,4 +21,5 @@ export {
   TasksForm,
   TasksList,
   Footer,
+  Modal,
 };

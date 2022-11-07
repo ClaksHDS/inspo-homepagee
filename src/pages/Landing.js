@@ -8,6 +8,7 @@ import {
   Quote,
   Tasks,
   Footer,
+  Modal,
 } from "../components";
 
 const Landing = () => {
@@ -33,6 +34,7 @@ const Landing = () => {
           <Tasks />
           <BackgroundBtn />
         </section>
+        <Modal />
         <Quote />
       </main>
       <footer>

@@ -1,14 +1,24 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  padding: 2rem;
-  display: grid;
-  place-items: center;
-  // fix the quote at the bottom
-  position: absolute;
-  bottom: 0;
-  left: 5rem;
-  right: 5rem;
+  .modal {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    border-radius: var(--borderRadius);
+    bottom: 0;
+    left: 5rem;
+    right: 5rem;
+    width: 80vw;
+    background: var(--backgroundColor);
+    transition: var(--transition);
+    transform: translate(-100%);
+    z-index: -10;
+  }
+  .show-modal {
+    transform: translate(0);
+    z-index: 999;
+  }
   .quote-details {
     display: flex;
     width: 80vw;
