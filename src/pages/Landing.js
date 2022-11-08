@@ -30,7 +30,7 @@ const Landing = () => {
           <Time />
           <Weather />
         </section>
-        <section>
+        <section className='tasks-section'>
           <Tasks />
           <BackgroundBtn />
         </section>

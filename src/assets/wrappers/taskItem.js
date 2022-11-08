@@ -22,7 +22,8 @@ const Wrapper = styled.div`
 
   .btn-container {
     position: absolute;
-    top: -25px;
+    padding-top: 0.55rem;
+    top: -30px;
     right: 15px;
     left: 15px;
     display: flex;

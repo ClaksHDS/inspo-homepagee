@@ -131,6 +131,9 @@ main {
   background-size: cover;
   z-index: -2;
 }
+.tasks-section {
+  padding: 2rem 2rem;
+}
 
 .dashboard {
   padding: 2rem 2rem;

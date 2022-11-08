@@ -21,7 +21,7 @@ const Wrapper = styled.div`
   }
   .quote-details {
     display: flex;
-    width: 80vw;
+    width: 70vw;
     max-height: 100px;
     justify-content: center;
     align-items: center;

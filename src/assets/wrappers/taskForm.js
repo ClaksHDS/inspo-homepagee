@@ -8,7 +8,7 @@ const Wrapper = styled.div`
     border-radius: var(--borderRadius);
     box-shadow: var(--shadow-2);
     padding: 2rem 2rem;
-    margin: 3rem auto;
+    margin: 2rem auto;
     .form-label {
       display: block;
       margin-bottom: 0.5rem;
