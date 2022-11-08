@@ -7,7 +7,7 @@ const Wrapper = styled.aside`
   button {
     background-color: var(--highlightColor);
     color: var(--headlineColor);
-    padding: 1rem;
+    padding: 0.55rem;
     border-radius: var(--borderRadius);
     border-color: transparent;
     box-shadow: var(--shadow-2);

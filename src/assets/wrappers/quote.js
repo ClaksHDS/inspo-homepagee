@@ -6,7 +6,7 @@ const Wrapper = styled.div`
     place-items: center;
     position: absolute;
     border-radius: var(--borderRadius);
-    bottom: 0;
+    bottom: 1rem;
     left: 5rem;
     right: 5rem;
     width: 80vw;
@@ -22,6 +22,7 @@ const Wrapper = styled.div`
   .quote-details {
     display: flex;
     width: 80vw;
+    max-height: 100px;
     justify-content: center;
     align-items: center;
     padding: 1rem 1rem;
@@ -29,6 +30,7 @@ const Wrapper = styled.div`
     border-radius: var(--borderRadius);
     color: var(--textColor);
     gap: 2rem;
+    overflow: scroll;
     span {
       font-style: italic;
     }
